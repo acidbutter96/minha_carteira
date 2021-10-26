@@ -1,13 +1,18 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 import GlobalStyles from './styles/GlobalStyles'
+
+import dark from './styles/themes/dark'
 
 import Layout from './components/Layout'
 
 const App: React.FC = () => {
     return (
         <>
-            <GlobalStyles />
-            <Layout />
+            <ThemeProvider theme={dark}>
+                <GlobalStyles />
+                <Layout />
+            </ThemeProvider>
         </>
     )
 }
